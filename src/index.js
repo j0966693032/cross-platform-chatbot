@@ -1,7 +1,9 @@
 const { router, text, line, messenger } = require('bottender/router');
 const handler = require('./handler')
 
+<html>
 <meta charset="utf8" />
+</html>
 
 exports.App = () => {
     return router([
