@@ -38,7 +38,8 @@ exports.HandleFollow = async context => {
 }
 
 exports.RankFollow = async context => {
-    await context.sendText(welcomeMessage);
+    //await context.sendText(welcomeMessage);
+    https://kma.kkbox.com/charts/hourly?terr=tw&lang=tc#
 }
 
 exports.HandleMessengerMessage = async context => {
