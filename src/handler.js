@@ -40,12 +40,14 @@ exports.HandleFollow = async context => {
 
 exports.RankFollow = async context => {
     //await context.sendText(`https://kma.kkbox.com/charts/daily/song`);
-	imageUrl: 'https://kma.kkbox.com/charts/assets/images/logo.svg?id=e41750806e78fa673556	',
-               action: {
+	let template = this.data.events.slice(0, 10).map(el => {
+                var url = encodeURI(el.url);
+                    imageUrl: 'https://kma.kkbox.com/charts/assets/images/logo.svg?id=e41750806e78fa673556	',
+                    action: {
                         type: 'uri',
-                        uri: (el.url == '') ? 'https://kma.kkbox.com/charts/daily/song`,
+                        uri: (el.url == '') ? `https://kma.kkbox.com/charts/daily/song`,
                         label: `${el.title}`.slice(0, 12),
-		}
+                    }              
 }
 
 exports.HandleMessengerMessage = async context => {
