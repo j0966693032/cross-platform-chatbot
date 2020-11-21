@@ -38,7 +38,7 @@ exports.HandleFollow = async context => {
 }
 
 exports.RankFollow = async context => {
-    uri: `https://kma.kkbox.com/charts/hourly?terr=tw&lang=tc`
+    await context.sendText(welcomeMessage);
 }
 
 exports.HandleMessengerMessage = async context => {
