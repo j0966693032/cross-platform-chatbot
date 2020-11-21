@@ -35,11 +35,17 @@ exports.HandleLineMessage = async context => {
 
 exports.HandleFollow = async context => {
     await context.sendText(welcomeMessage);
+	https://i.kfs.io/album/global/65394915,0v1/fit/160x160.jpg
 }
 
 exports.RankFollow = async context => {
-    //await context.sendText(welcomeMessage);
-    await context.sendText(`https://kma.kkbox.com/charts/hourly?terr=tw&lang=tc#`);
+    //await context.sendText(`https://kma.kkbox.com/charts/daily/song`);
+	imageUrl: 'https://kma.kkbox.com/charts/assets/images/logo.svg?id=e41750806e78fa673556	',
+               action: {
+                        type: 'uri',
+                        uri: (el.url == '') ? 'https://kma.kkbox.com/charts/daily/song`,
+                        label: `${el.title}`.slice(0, 12),
+		}
 }
 
 exports.HandleMessengerMessage = async context => {
