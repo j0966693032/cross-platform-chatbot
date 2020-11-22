@@ -9,7 +9,7 @@ const welcomeMessage ='您可以問我\n' + '排行榜 ； \n' +
 
 
 exports.HandleLineMessage = async context => {
-    if (context.event.isText=="排行榜") {
+    if (context.event.isText == "排行榜") {
         await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
     }else if(context.event.isText){
         kkassistant.nlu(context.event.text, context.session.id)
