@@ -1,7 +1,7 @@
 const KKBOXMessage = require('./message/KKBOXMessage');
 const kkbox = global.kkbox;
 const kkassistant = global.kkassistant
-var song = ["盧廣仲", "任然", "阿冗","八三夭", "黃鴻升", "陳昊森","陳零九", "夢然", "en","茄子蛋","井朧", "高爾宣", "吳青峰","于文文", "周興哲", "棉子","鄧紫棋", "周杰倫", "陳雪凝","李榮浩","玖壹意"];
+var song = ["盧廣仲", "任然", "阿冗","八三夭", "黃鴻升", "陳昊森","陳零九", "夢然", "en","茄子蛋","井朧", "高爾宣", "吳青峰","于文文", "周興哲", "棉子","鄧紫棋", "周杰倫", "陳雪凝","李榮浩","玖壹意","蔡健雅","瘦子"];
 
 const welcomeMessage ='您可以問我\n' + '排行榜 ； \n' + '推薦的歌曲' +
     '音樂：「播放告白氣球」；「播放自傳專輯的歌」；「我要聽鄉村音樂」；「我要聽日文新歌」\n' + 
@@ -34,7 +34,7 @@ exports.HandleLineMessage = async context => {
     }
 }
 exports.songFollow = async context => {
-    kkassistant.nlu(song[Math.floor(Math.random()*21)], context.session.id)
+    kkassistant.nlu(song[Math.floor(Math.random()*23)], context.session.id)
             .then(nluResp => {
                 if (nluResp.directives.length > 0) {
                     if(nluResp.directives[0].type == 'AudioPlayer.Play') {
