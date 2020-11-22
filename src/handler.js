@@ -39,7 +39,6 @@ exports.HandleFollow = async context => {
 
 exports.RankFollow = async context => {
     //await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
-    toLineMessage() {
         let template = this.data.events.slice(0, 10).map(el => {
             var url = encodeURI(el.url);
             return {
@@ -51,7 +50,6 @@ exports.RankFollow = async context => {
                 }
             }
         });
-    }
 }
 
 exports.HandleMessengerMessage = async context => {
