@@ -42,16 +42,14 @@ module.exports = class RankFollow{
     toLineMessage() {    
         let template = this.data.events.slice(0, 10).map(el => {
             var url = encodeURI(el.url);
-            //return {
+            return {
                 imageUrl: 'https://kma.kkbox.com/charts/assets/images/logo.svg?id=e41750806e78fa673556/600x600.jpg',
                 action: {
                     type: 'uri',
-                    uri: 'https://kma.kkbox.com/charts/daily/song?terr=tw&lang=tc',
-                   // uri: (el.url == '') ? 'https://kma.kkbox.com/charts/daily/song/' : `${url}`,
-
                     label: `${el.title}`.slice(0, 12),
+                    uri: 'https://kma.kkbox.com/charts/daily/song?terr=tw&lang=tc',
                 }
-          //  }
+            }
         });
     }
 }
