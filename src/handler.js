@@ -37,7 +37,11 @@ exports.HandleFollow = async context => {
     await context.sendText(welcomeMessage);
 }
 
-module.exports = class RankFollow{
+exports.RankFollow = async context => {
+    await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
+}
+
+/*module.exports = class RankFollow{
    // await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
     toLineMessage() {    
         let template = this.data.events.slice(0, 10).map(el => {
@@ -53,7 +57,7 @@ module.exports = class RankFollow{
         });
     }
 }
-
+*/
 exports.HandleMessengerMessage = async context => {
     if (context.event.isText) {
         await context.sendText(`received the text message: ${context.event.text}`);
