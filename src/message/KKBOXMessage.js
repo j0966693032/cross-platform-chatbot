@@ -1,4 +1,4 @@
-/const Message = require('./Message')
+const Message = require('./Message')
 
 module.exports = class KKBOXMessage extends Message {
     constructor(data, dataType) {
