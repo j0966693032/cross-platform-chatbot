@@ -36,12 +36,12 @@ exports.HandleLineMessage = async context => {
 exports.HandleFollow = async context => {
     await context.sendText(welcomeMessage);
 }
-/*
+
 exports.RankFollow = async context => {
     await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
 }
-*/
-///*
+
+/*
 module.exports = class RankFollow{
    // await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
     toLineMessage() {    
@@ -59,7 +59,7 @@ module.exports = class RankFollow{
         return { altText: '音樂活動資訊', template };
     }
 }
-//*/
+*/
 exports.HandleMessengerMessage = async context => {
     if (context.event.isText) {
         await context.sendText(`received the text message: ${context.event.text}`);
