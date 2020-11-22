@@ -37,19 +37,8 @@ exports.HandleFollow = async context => {
     await context.sendText(welcomeMessage);
 }
 
-module.exports = class RankFollow{
-    //await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
-        let template = this.data.events.slice(0, 10).map(el => {
-            var url = encodeURI(el.url);
-            
-                imageUrl: 'https://kma.kkbox.com/charts/assets/images/logo.svg?id=e41750806e78fa673556/600x600.jpg',
-                action: {
-                    type: 'uri',
-                    uri: 'https://kma.kkbox.com/charts/daily/song',
-                    label: `${el.title}`.slice(0, 12),
-                }
-           
-        });
+exports.RankFollow = async context => {
+    await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
 }
 
 exports.HandleMessengerMessage = async context => {
