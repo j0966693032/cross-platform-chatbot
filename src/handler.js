@@ -39,10 +39,11 @@ exports.HandleFollow = async context => {
 
 module.exports = class RankFollow{
    // await context.sendText(`https://kma.kkbox.com/charts/daily/song`); 
+    toLineMessage() {    
         let template = this.data.events.slice(0, 10).map(el => {
             var url = encodeURI(el.url);
             return {
-                imageUrl: 'https://i.kfs.io/muser/global/131527099v9/cropresize/600x600.jpg',
+                imageUrl: 'https://kma.kkbox.com/charts/assets/images/logo.svg?id=e41750806e78fa673556/600x600.jpg',
                 action: {
                     type: 'uri',
                     uri: 'https://kma.kkbox.com/charts/daily/song/',
@@ -50,6 +51,7 @@ module.exports = class RankFollow{
                 }
             }
         });
+    }
 }
 
 exports.HandleMessengerMessage = async context => {
