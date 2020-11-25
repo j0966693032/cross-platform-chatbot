@@ -59,7 +59,7 @@ exports.Fsong = async context => {
             .catch(error => {
                 console.error('Error: ', error);
             });
-    await context.sendButtonsTemplate('www');
+    context.sendImageCarouselTemplate('xxx');
 }
 
 exports.recentweek = async context => {
