@@ -131,57 +131,6 @@ exports.HandleLineMessage = async context => {
             .catch(error => {
                 console.error('Error: ', error);
             });
-            quickReply: {
-                    items: [
-                      {
-                          type: 'action',
-                          imageUrl: '',
-                          action: {
-                              type: 'message',
-                              label: '顯示功能',
-                              text: 'help',
-                          }, 
-                      },
-                      {
-                          type: 'action',
-                          imageUrl: '',
-                          action: {
-                              type: 'message',
-                              label: '隨機推薦歌曲',
-                              text: '推薦的歌曲',
-                          }, 
-                      },
-                      {
-                          type: 'action',
-                          imageUrl: '',
-                          action: {
-                              type: 'message',
-                              label: '本日熱門的歌',
-                              text: '今日排行榜',
-                          }, 
-                      },
-                      {
-                          type: 'action',
-                          imageUrl: '',
-                          action: {
-                              type: 'message',
-                              label: '本周熱門歌',
-                              text: '本周排行榜',
-                          }, 
-                      },
-                      {
-                          type: 'action',
-                          imageUrl: '',
-                          action: {
-                              type: 'message',
-                              label: '今年度總排名',
-                              text: '年度排行榜',
-                          }, 
-                      },
-                    ],
-                    }
-        }
-    );
     }
 }
 
@@ -239,8 +188,6 @@ exports.HandleFollow = async context => {
 }
     );
 }
-
-
 
 exports.help = async context => {
     await context.sendText(helpMessage, {
