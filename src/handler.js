@@ -60,6 +60,7 @@ exports.Fsong = async context => {
                 console.error('Error: ', error);
             });
 }
+
 exports.recentweek = async context => {
     await context.sendButtonsTemplate('想知道最近火紅的歌曲有哪些嗎?快來 KKBOX 風雲榜。', {
         thumbnailImageUrl: 'https://kma.kkbox.com/charts/assets/images/logo.svg?id=e41750806e78fa673556',
@@ -189,6 +190,7 @@ exports.helpMessage = async context => {
             ],
         }
     }
+    );
 }
 
 exports.HandleMessengerMessage = async context => {
