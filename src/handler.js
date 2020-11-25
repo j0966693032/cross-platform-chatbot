@@ -184,6 +184,7 @@ exports.helpMessage = async context => {
             ],
         }
     }
+}
 exports.HandleMessengerMessage = async context => {
     if (context.event.isText) {
         await context.sendText(`received the text message: ${context.event.text}`);
