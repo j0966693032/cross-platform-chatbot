@@ -14,57 +14,6 @@ const helpMessage ='功能\n' +
      '輸入本周排行榜顯示風雲榜本周排行\n' + 
      '輸入年度排行榜顯示風雲榜年度排行\n';
 
-const tset= {
-    quickReply: {
-        items: [
-          {
-              type: 'action',
-              imageUrl: '',
-              action: {
-                  type: 'message',
-                  label: '顯示功能',
-                  text: 'help',
-              }, 
-          },
-          {
-              type: 'action',
-              imageUrl: '',
-              action: {
-                  type: 'message',
-                  label: '隨機推薦歌曲',
-                  text: '推薦的歌曲',
-              }, 
-          },
-          {
-              type: 'action',
-              imageUrl: '',
-              action: {
-                  type: 'message',
-                  label: '本日熱門的歌',
-                  text: '今日排行榜',
-              }, 
-          },
-          {
-              type: 'action',
-              imageUrl: '',
-              action: {
-                  type: 'message',
-                  label: '本周熱門歌',
-                  text: '本周排行榜',
-              }, 
-          },
-          {
-              type: 'action',
-              imageUrl: '',
-              action: {
-                  type: 'message',
-                  label: '今年度總排名',
-                  text: '年度排行榜',
-              }, 
-          },
-        ],
-    }
-}
 exports.HandleLineMessage = async context => {
     if(context.event.isText){
         kkassistant.nlu(context.event.text, context.session.id)
@@ -182,67 +131,171 @@ exports.HandleLineMessage = async context => {
             .catch(error => {
                 console.error('Error: ', error);
             });
+            quickReply: {
+                    items: [
+                      {
+                          type: 'action',
+                          imageUrl: '',
+                          action: {
+                              type: 'message',
+                              label: '顯示功能',
+                              text: 'help',
+                          }, 
+                      },
+                      {
+                          type: 'action',
+                          imageUrl: '',
+                          action: {
+                              type: 'message',
+                              label: '隨機推薦歌曲',
+                              text: '推薦的歌曲',
+                          }, 
+                      },
+                      {
+                          type: 'action',
+                          imageUrl: '',
+                          action: {
+                              type: 'message',
+                              label: '本日熱門的歌',
+                              text: '今日排行榜',
+                          }, 
+                      },
+                      {
+                          type: 'action',
+                          imageUrl: '',
+                          action: {
+                              type: 'message',
+                              label: '本周熱門歌',
+                              text: '本周排行榜',
+                          }, 
+                      },
+                      {
+                          type: 'action',
+                          imageUrl: '',
+                          action: {
+                              type: 'message',
+                              label: '今年度總排名',
+                              text: '年度排行榜',
+                          }, 
+                      },
+                    ],
+                    }
+        }
+    );
     }
 }
 
 exports.HandleFollow = async context => {
-    await context.sendText(welcomeMessage);
+    await context.sendText(welcomeMessage,{
+    quickReply: {
+        items: [
+          {
+              type: 'action',
+              imageUrl: '',
+              action: {
+                  type: 'message',
+                  label: '顯示功能',
+                  text: 'help',
+              }, 
+          },
+          {
+              type: 'action',
+              imageUrl: '',
+              action: {
+                  type: 'message',
+                  label: '隨機推薦歌曲',
+                  text: '推薦的歌曲',
+              }, 
+          },
+          {
+              type: 'action',
+              imageUrl: '',
+              action: {
+                  type: 'message',
+                  label: '本日熱門的歌',
+                  text: '今日排行榜',
+              }, 
+          },
+          {
+              type: 'action',
+              imageUrl: '',
+              action: {
+                  type: 'message',
+                  label: '本周熱門歌',
+                  text: '本周排行榜',
+              }, 
+          },
+          {
+              type: 'action',
+              imageUrl: '',
+              action: {
+                  type: 'message',
+                  label: '今年度總排名',
+                  text: '年度排行榜',
+              }, 
+          },
+        ],
+        }
+}
+    );
 }
 
+
+
 exports.help = async context => {
-    await context.sendText(helpMessage, test);}//{
-//        quickReply: {
-//            items: [
-//              {
-//                  type: 'action',
-//                  imageUrl: '',
-//                  action: {
-//                      type: 'message',
-//                      label: '顯示功能',
-//                      text: 'help',
-//                  }, 
-//              },
-//              {
-//                  type: 'action',
-//                  imageUrl: '',
-//                  action: {
-//                      type: 'message',
-//                      label: '隨機推薦歌曲',
-//                      text: '推薦的歌曲',
-//                  }, 
-//              },
-//              {
-//                  type: 'action',
-//                  imageUrl: '',
-//                  action: {
-//                      type: 'message',
-//                      label: '本日熱門的歌',
-//                      text: '今日排行榜',
-//                  }, 
-//              },
-//              {
-//                  type: 'action',
-//                  imageUrl: '',
-//                  action: {
-//                      type: 'message',
-//                      label: '本周熱門歌',
-//                      text: '本周排行榜',
-//                  }, 
-//              },
-//              {
-//                  type: 'action',
-//                  imageUrl: '',
-//                  action: {
-//                      type: 'message',
-//                      label: '今年度總排名',
-//                      text: '年度排行榜',
-//                  }, 
-//              },
-//            ],
-//        }
-//    }
-//    );
-//}
+    await context.sendText(helpMessage, {
+        quickReply: {
+            items: [
+              {
+                  type: 'action',
+                  imageUrl: '',
+                  action: {
+                      type: 'message',
+                      label: '顯示功能',
+                      text: 'help',
+                  }, 
+              },
+              {
+                  type: 'action',
+                  imageUrl: '',
+                  action: {
+                      type: 'message',
+                      label: '隨機推薦歌曲',
+                      text: '推薦的歌曲',
+                  }, 
+              },
+              {
+                  type: 'action',
+                  imageUrl: '',
+                  action: {
+                      type: 'message',
+                      label: '本日熱門的歌',
+                      text: '今日排行榜',
+                  }, 
+              },
+              {
+                  type: 'action',
+                  imageUrl: '',
+                  action: {
+                      type: 'message',
+                      label: '本周熱門歌',
+                      text: '本周排行榜',
+                  }, 
+              },
+              {
+                  type: 'action',
+                  imageUrl: '',
+                  action: {
+                      type: 'message',
+                      label: '今年度總排名',
+                      text: '年度排行榜',
+                  }, 
+              },
+            ],
+        }
+    }
+    );
+}
 
 exports.HandleMessengerMessage = async context => {
     if (context.event.isText) {
