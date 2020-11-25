@@ -65,8 +65,6 @@ const tset= {
         ],
     }
 }
-    );
-}
 exports.HandleLineMessage = async context => {
     if(context.event.isText){
         kkassistant.nlu(context.event.text, context.session.id)
