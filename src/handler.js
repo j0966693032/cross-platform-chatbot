@@ -8,7 +8,7 @@ const welcomeMessage ='Hi~ 本 Bot 是用 https://github.com/j0966693032/cross-p
     '音樂活動：「查詢高雄的活動」；「查詢吳卓源的演場會」；「查詢兩廳院的表演」\n' +
     '影音內容：「查詢影片進擊的巨人」；「查詢日劇半澤直樹」\n' + 'help顯示功能\n';
 
-const helpMessage ='功能\n' + '輸入推薦的歌手將隨機推薦歌手' + '輸入今日排行榜顯示風雲榜今日排行\n' + '輸入本周排行榜顯示風雲榜本周排行\n' + '輸入年度排行榜顯示風雲榜年度排行\n'  '';
+const helpMessage ='功能\n' + '輸入推薦的歌手將隨機推薦歌手' + '輸入今日排行榜顯示風雲榜今日排行\n' + '輸入本周排行榜顯示風雲榜本周排行\n' + '輸入年度排行榜顯示風雲榜年度排行\n';
 
 exports.HandleLineMessage = async context => {
     if(context.event.isText){
