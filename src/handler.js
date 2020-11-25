@@ -156,8 +156,8 @@ exports.help = async context => {
                   imageUrl: '',
                   action: {
                       type: 'message',
-                      label: '隨機推薦歌手',
-                      text: '推薦的歌手',
+                      label: '隨機推薦歌曲',
+                      text: '推薦的歌曲',
                   }, 
               },
               {
