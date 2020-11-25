@@ -3,7 +3,7 @@ const handler = require('./handler')
 
 exports.App = () => {
     return router([
-        text(/^(help|heal )$/i, handler.help),
+        text(/^(help|help )$/i, handler.help),
         text(/^(hi|hello)$/i, handler.HandleFollow),
 	    text(/^(今日排行榜)$/i, handler.recentday),
 	    text(/^(本周排行榜)$/i, handler.recentweek),
